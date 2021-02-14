@@ -2,7 +2,7 @@
 layout: post
 title: Python+PyCharm+PyQt5图形化开发
 category: [python]
-tags: [python][PyQt5]
+tags: [python]
 ---
 
 # 环境准备
