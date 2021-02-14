@@ -14,7 +14,7 @@ keywords: ["jekyll", "oracle", "sql","blog"]
 # Jekyll configuration
 ####################################
 #
-timezone:          Asia/Shanghai
+timezone:          Asia/Nanjing
 markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
@@ -39,9 +39,9 @@ plugins:
 owner:
   name: vimysql
   avatar: avatar.jpg
-  job: "Java & Scala Developer"
+  job: "Oracle DBA"
   bio: "A backend developer who loves design awesome things. Working for Dianping at in Shanghai, China."
-  email: zhujiajun.me@gmail.com
+  email: 702367@qq.com
   disqus-shortname: #username
   twitter:  #username
   facebook: #username
@@ -52,7 +52,7 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: zjiajun #username
+  github: vimysql #username
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
   xing: #username
