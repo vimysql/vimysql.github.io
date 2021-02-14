@@ -1,10 +1,8 @@
 ---
 layout: post
-title: 'Python+PyCharm+PyQt5图形化开发'
-date: '2020-03-06'
-tags:
-     - python
-author: '王小胖'
+title: Python+PyCharm+PyQt5图形化开发
+category: [python]
+tags: [python]
 ---
 
 # 环境准备
