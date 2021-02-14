@@ -2,7 +2,6 @@
 layout: post
 title: 'Python+PyCharm+PyQt5图形化开发'
 date: '2020-03-06'
-header-img: "img/post-bg-android.jpg"
 tags:
      - python
 author: '王小胖'
