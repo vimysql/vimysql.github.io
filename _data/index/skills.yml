@@ -2,5 +2,5 @@
 
 label: Ability
 id : cs
-aspects: Oracle, MySQL, PostgreSQL, English
-percentage: 70, 30, 20, 30
+aspects: Oracle, MySQL, PostgreSQL, SQL, English
+percentage: 70, 30, 20, 50, 30
