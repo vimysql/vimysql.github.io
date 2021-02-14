@@ -1,11 +1,8 @@
 ---
 layout: post
-title: 'PostgreSQL structure of a database cluster（Part I）'
-date: '2020-03-16'
-header-img: "img/post-bg-android.jpg"
-tags:
-     - postgresql
-author: '王小胖'
+title: PostgreSQL structure of a database cluster（Part I）
+category: [postgresql]
+tags: [structure]
 ---
 
 # Structure of a database cluster

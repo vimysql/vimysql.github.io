@@ -1,11 +1,8 @@
 ---
 layout: post
-title: 'Telegraf+InfluxDB+Grafana+Python实现Oracle实时监控——之监控数据库服务器IP地址存活'
-date: '2020-04-15'
-header-img: "./img/post-bg-android.jpg"
-tags:
-     - python
-author: '王小胖'
+title: Telegraf+InfluxDB+Grafana+Python实现Oracle实时监控——之监控数据库服务器IP地址存活
+category: [python]
+tags: [InfluxDB]
 ---
 
 # 监控数据库服务器IP地址存活

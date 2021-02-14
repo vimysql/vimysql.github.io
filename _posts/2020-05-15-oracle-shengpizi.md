@@ -1,11 +1,8 @@
 ---
 layout: post
-title: 'Oracle数据库中汉字生僻字如何处理'
-date: '2020-05-15'
-header-img: "./img/post-bg-android.jpg"
-tags:
-     - oracle
-author: '王小胖'
+title: Oracle数据库中汉字生僻字如何处理
+category: [oracle]
+tags: [生僻字]
 ---
 
 # 数据库中汉字生僻字

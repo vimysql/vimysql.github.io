@@ -1,11 +1,8 @@
 ---
 layout: post
-title: 'ALERT: Disable Transparent HugePages on SLES11, RHEL6, OEL6 and UEK2 Kernels (Doc ID 1557478.1)'
-date: '2020-03-26'
-header-img: "img/post-bg-android.jpg"
-tags:
-     - oracle
-author: '王小胖'
+title: ALERT: Disable Transparent HugePages on SLES11, RHEL6, OEL6 and UEK2 Kernels (Doc ID 1557478.1)
+category: [oracle]
+tags: [HugePages]
 ---
 
 # Disable Transparent Huge Pages (THP) 
