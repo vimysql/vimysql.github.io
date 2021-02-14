@@ -1,15 +1,21 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
-- name: Dianping
-  link: http://www.dianping.com/
-  date: Jan 2017 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
-  job: Java Developer
+- name: LIANLIFE
+  link: http://www.lianlife.com/
+  date: Dec 2018 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+  job: Oracle DBA
 
-- name: Madhouse
-  link: http://www.madhouse.cn/
-  date: Mar 2015 - Jan 2017
-  job: Java Developer
+- name: DNT
+  link: https://www.dnt.com.cn/
+  date: Apr 2013 - Nov 2018
+  job: Oracle DBA
 
-- name: Chexiang
-  link: http://www.chexiang.com/
-  date: Jul 2014 - Mar 2015
+- name: cntaiping
+  link: http://www.cntaiping.com
+  date: Mar 2012 - Apr 2013
+  job: Oracle DBA
+  
+- name: NCI
+  link: https://www.newchinalife.com
+  date: Jul 2010 - Mar 2012
+  job: Helpdesk Engineer
