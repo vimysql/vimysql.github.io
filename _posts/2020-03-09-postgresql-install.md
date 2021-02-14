@@ -3,8 +3,8 @@ layout: post
 title: 'PostgreSQL安装'
 date: '2020-03-09'
 header-img: "img/post-bg-android.jpg"
-tags:
-     - postgresql
+category: [postgresql]
+tags: [postgresql]
 author: '王小胖'
 ---
 
