@@ -3,11 +3,11 @@
 # Site wide configuration
 ####################################
 #
-title: zhujiajun
-email: zhujiajun.me@gmail.com
-description: zhujiajun's blog,powered by jekyll.
-url: https://zjiajun.github.io # the base hostname & protocol for your site
-keywords: ["jekyll", "java", "scala","blog"]
+title: vimysql
+email: 702367@qq.com
+description: vimysql's blog,powered by jekyll.
+url: https://vimysql.github.io # the base hostname & protocol for your site
+keywords: ["jekyll", "oracle", "sql","blog"]
 
 #
 ###################################
