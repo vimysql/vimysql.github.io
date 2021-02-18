@@ -5,16 +5,16 @@ category: [oracle]
 tags: [生僻字]
 ---
 
-#### 数据库中汉字生僻字
+##### 数据库中汉字生僻字
 介绍在Oracle如何处理需要录入汉字生僻字的方法
 
-##### 生僻字案例
+###### 生僻字案例
 ----
 如汉字中的生僻字"𡚸"，在录入数据库中，如果不做特殊处理时，最后会显示为"??"。
 如下图所示：
 ![image](./img/2020-05-15-oracle-shengpizi/shengpizi_1.png)
 
-##### 使用nvarchar字符类型存储
+###### 使用nvarchar字符类型存储
 ----
 ```
 select '𡚸', n'𡚸', userenv('language') from dual;
