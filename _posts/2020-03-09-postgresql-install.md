@@ -31,7 +31,8 @@ postgresql-10.12/contrib/sslinfo/
 ###### 解压后将目录复制到/usr/local目录
 ----
 复制完成后使用ln -s做软链接，方便今后的postgresql软件升级
-```[root@ecs-s6-large-2-linux-20191218010705 software]# ll
+```
+[root@ecs-s6-large-2-linux-20191218010705 software]# ll
 total 24364
 drwxrwxrwx 6 1107 1107     4096 Feb 11 06:32 postgresql-10.12
 -rw-rw-r-- 1 root root 24940708 Mar  6 16:55 postgresql-10.12.tar.gz
@@ -42,33 +43,42 @@ drwxrwxrwx 6 1107 1107     4096 Feb 11 06:32 postgresql-10.12
 
 ###### 编译安装postgresql时可能会出现如下两个问题
 ----
-```[root@ecs-s6-large-2-linux-20191218010705 local]# cd postgresql
+```
+[root@ecs-s6-large-2-linux-20191218010705 local]# cd postgresql
 [root@ecs-s6-large-2-linux-20191218010705 postgresql]#  ./configure   --prefix=/usr/local/postgresql --with-python --with-perl
 checking build system type... x86_64-pc-linux-gnu
 checking host system type... x86_64-pc-linux-gnu
 checking which template to use... linux
-checking whether NLS is wanted... no```
+checking whether NLS is wanted... no
+```
 
 出现如下问题，执行yum install perl-ExtUtils-Embed
-```checking for flags to link embedded Perl... Can't locate ExtUtils/Embed.pm in @INC (@INC contains: /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .).
+```
+checking for flags to link embedded Perl... Can't locate ExtUtils/Embed.pm in @INC (@INC contains: /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .).
 BEGIN failed--compilation aborted.
 no
 configure: error: could not determine flags for linking embedded Perl.
 This probably means that ExtUtils::Embed or ExtUtils::MakeMaker is not
-installed.```
+installed.
+```
 
 出现如下问题，执行yum install python python-devel  
-```checking Python.h usability... no
+```
+checking Python.h usability... no
 checking Python.h presence... no
 checking for Python.h... no
-configure: error: header file <Python.h> is required for Python```
+configure: error: header file <Python.h> is required for Python
+```
 
 问题解决后重新执行./configure   --prefix=/usr/local/postgresql --with-python --with-perl命令即可。
-```[root@ecs-s6-large-2-linux-20191218010705 postgresql]#  ./configure   --prefix=/usr/local/postgresql --with-python --with-perl
-[root@ecs-s6-large-2-linux-20191218010705 postgresql]# make && make   install```
+```
+[root@ecs-s6-large-2-linux-20191218010705 postgresql]#  ./configure   --prefix=/usr/local/postgresql --with-python --with-perl
+[root@ecs-s6-large-2-linux-20191218010705 postgresql]# make && make   install
+```
 ###### 创建postgres用户及用户组，并initdb
 ----
-```[root@ecs-s6-large-2-linux-20191218010705 postgresql]# groupadd postgres
+```
+[root@ecs-s6-large-2-linux-20191218010705 postgresql]# groupadd postgres
 [root@ecs-s6-large-2-linux-20191218010705 postgresql]# useradd -g postgres   postgres
 [root@ecs-s6-large-2-linux-20191218010705 postgresql]# id postgres
 uid=1000(postgres) gid=1001(postgres) groups=1001(postgres)
@@ -118,16 +128,20 @@ You can change this by editing pg_hba.conf or using the option -A, or
 
 Success. You can now start the database server using:
 
-pg_ctl -D /data/postgres/data -l logfile start```
+pg_ctl -D /data/postgres/data -l logfile start
+```
     
 ###### 安装contrib目录下的工具
 ----
-```[root@ecs-s6-large-2-linux-20191218010705 postgresql]# cd /usr/local/postgresql/contrib/
-[root@ecs-s6-large-2-linux-20191218010705 contrib]# make&&make   install```
+```
+[root@ecs-s6-large-2-linux-20191218010705 postgresql]# cd /usr/local/postgresql/contrib/
+[root@ecs-s6-large-2-linux-20191218010705 contrib]# make&&make   install
+```
 
 ###### 启动postgresql数据库
 ----
-```[root@ecs-s6-large-2-linux-20191218010705 contrib]# su  - postgres
+```
+[root@ecs-s6-large-2-linux-20191218010705 contrib]# su  - postgres
 Last login: Mon Mar  9 11:23:48 CST 2020 on pts/0
 [postgres@ecs-s6-large-2-linux-20191218010705 ~]$ pg_ctl -D /data/postgres/data -l logfile start
 waiting for server to start.... done
@@ -159,11 +173,13 @@ postgres=# \l
            |          |          |             |             | postgres=CTc/postgres
 (3 rows)
 
-postgres=# ```
+postgres=# 
+```
 
 ###### postgresql配置允许远程连接
 ----
-```[postgres@ecs-s6-large-2-linux-20191218010705 ~]$ vi /data/postgres/data/postgresql.conf
+```
+[postgres@ecs-s6-large-2-linux-20191218010705 ~]$ vi /data/postgres/data/postgresql.conf
 listen_addresses = '127.0.0.1'              # what IP address(es) to listen on;
                                         # comma-separated list of addresses;
                                         # defaults to 'localhost'; use '*' for all
@@ -186,7 +202,8 @@ waiting for server to start....2020-03-09 15:10:06.273 CST [31274] LOG:  listeni
 2020-03-09 15:10:06.288 CST [31275] LOG:  database system was shut down at 2020-03-09 15:10:06 CST
 2020-03-09 15:10:06.291 CST [31274] LOG:  database system is ready to accept connections
  done
-server started```
+server started
+```
 
 
 > 如有任何知识产权、版权问题或理论错误，还请指正。
