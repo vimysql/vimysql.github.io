@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ALERT Disable Transparent HugePages on SLES11, RHEL6, OEL6 and UEK2 Kernels (Doc ID 1557478.1)
+title: ALERT:Disable Transparent HugePages on SLES11, RHEL6, OEL6 and UEK2 Kernels (Doc ID 1557478.1)
 category: [oracle]
 tags: [HugePages]
 ---
