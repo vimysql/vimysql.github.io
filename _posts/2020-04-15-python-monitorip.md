@@ -5,19 +5,19 @@ category: [python]
 tags: [InfluxDB]
 ---
 
-# 监控数据库服务器IP地址存活
+##### 监控数据库服务器IP地址存活
 使用Telegraf+InfluxDB+Grafana+Python的方式监控数据库服务器IP地址存活。
 
-## 监控程序的目录结构如下
+###### 监控程序的目录结构如下
 ----
 主要是在telegraf采集程序中创建congfig、shell和log目录，三个目录的作用如下：
 config：存放采集IP地址的telegraf配置文件
 shell：存放采集IP地址的python脚本
 log：存放采集IP地址的对应log日志
 
-![image](./img/2020-04-15-python-monitorip/monitorip_1.png)
+![image](/img/2020-04-15-python-monitorip/monitorip_1.png)
 
-## python脚本如下
+###### python脚本如下
 ----
 ```
 #!/usr/bin/env python
@@ -76,9 +76,9 @@ if __name__ == "__main__":
 hostip.txt监控IP清单中的格式如下，以英文逗号“,”作为分隔符，如下所示：
 1,testdb01,192.168.1.1
 
-## Grafana展示页面
+###### Grafana展示页面
 ----
-![image](./img/2020-04-15-python-monitorip/monitorip_2.png)
+![image](/img/2020-04-15-python-monitorip/monitorip_2.png)
 
 > 如有任何知识产权、版权问题或理论错误，还请指正。
 >
