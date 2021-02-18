@@ -22,7 +22,7 @@ select '𡚸', n'𡚸', userenv('language') from dual;
 ```
 我们如果想正常保存或者插入生僻字，可以使用n'生僻字'的方式进行操作。
 如下图所示：
-![image](./img/2020-05-15-oracle-shengpizi/shengpizi_2.png)
+![image](/img/2020-05-15-oracle-shengpizi/shengpizi_2.png)
 
 > 如有任何知识产权、版权问题或理论错误，还请指正。
 >
