@@ -6,8 +6,8 @@ tags: [postgresql]
 ---
 
 
-# CentOS 7平台安装PostgreSQL 10.12
-## 解压软件tar包
+##### CentOS 7平台安装PostgreSQL 10.12
+###### 解压软件tar包
 ----
 ```
 [root@ecs-s6-large-2-linux-20191218010705 software]# cat /etc/redhat-release
@@ -28,7 +28,7 @@ postgresql-10.12/contrib/sslinfo/
 ```
 
 
-## 解压后将目录复制到/usr/local目录
+###### 解压后将目录复制到/usr/local目录
 ----
 复制完成后使用ln -s做软链接，方便今后的postgresql软件升级
 ```[root@ecs-s6-large-2-linux-20191218010705 software]# ll
@@ -40,7 +40,7 @@ drwxrwxrwx 6 1107 1107     4096 Feb 11 06:32 postgresql-10.12
 [root@ecs-s6-large-2-linux-20191218010705 local]# ln -s /usr/local/postgresql-10.12 postgresql
 ```
 
-## 编译安装postgresql时可能会出现如下两个问题
+###### 编译安装postgresql时可能会出现如下两个问题
 ----
 ```[root@ecs-s6-large-2-linux-20191218010705 local]# cd postgresql
 [root@ecs-s6-large-2-linux-20191218010705 postgresql]#  ./configure   --prefix=/usr/local/postgresql --with-python --with-perl
@@ -66,7 +66,7 @@ configure: error: header file <Python.h> is required for Python```
 问题解决后重新执行./configure   --prefix=/usr/local/postgresql --with-python --with-perl命令即可。
 ```[root@ecs-s6-large-2-linux-20191218010705 postgresql]#  ./configure   --prefix=/usr/local/postgresql --with-python --with-perl
 [root@ecs-s6-large-2-linux-20191218010705 postgresql]# make && make   install```
-## 创建postgres用户及用户组，并initdb
+###### 创建postgres用户及用户组，并initdb
 ----
 ```[root@ecs-s6-large-2-linux-20191218010705 postgresql]# groupadd postgres
 [root@ecs-s6-large-2-linux-20191218010705 postgresql]# useradd -g postgres   postgres
@@ -120,12 +120,12 @@ Success. You can now start the database server using:
 
 pg_ctl -D /data/postgres/data -l logfile start```
     
-## 安装contrib目录下的工具
+###### 安装contrib目录下的工具
 ----
 ```[root@ecs-s6-large-2-linux-20191218010705 postgresql]# cd /usr/local/postgresql/contrib/
 [root@ecs-s6-large-2-linux-20191218010705 contrib]# make&&make   install```
 
-## 启动postgresql数据库
+###### 启动postgresql数据库
 ----
 ```[root@ecs-s6-large-2-linux-20191218010705 contrib]# su  - postgres
 Last login: Mon Mar  9 11:23:48 CST 2020 on pts/0
@@ -161,7 +161,7 @@ postgres=# \l
 
 postgres=# ```
 
-## postgresql配置允许远程连接
+###### postgresql配置允许远程连接
 ----
 ```[postgres@ecs-s6-large-2-linux-20191218010705 ~]$ vi /data/postgres/data/postgresql.conf
 listen_addresses = '127.0.0.1'              # what IP address(es) to listen on;
