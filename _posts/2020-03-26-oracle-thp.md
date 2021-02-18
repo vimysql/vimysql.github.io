@@ -5,14 +5,14 @@ category: [oracle]
 tags: [HugePages]
 ---
 
-# Disable Transparent Huge Pages (THP) 
+##### Disable Transparent Huge Pages (THP) 
 Starting with RedHat 6, OEL 6, SLES 11 and UEK2 kernels, Transparent HugePages are implemented and enabled (default) in an attempt to improve the memorymanagement.  Transparent HugePages are similar to the HugePages that have been available in previous Linux releases.  The main difference is that the TransparentHugePages are set up dynamically at run time by the khugepaged thread in kernel while the regular HugePages had to be preallocated at the boot up time.
 
-## THP特性对Oracle的影响
+###### THP特性对Oracle的影响
 ----
 Because Transparent HugePages are known to cause unexpected node reboots and performance problems with RAC, Oracle strongly advises to disable the use ofTransparent HugePages. In addition, Transparent Hugepages may cause problems even in a single-instance database environment with unexpected performanceproblems or delays. As such, Oracle recommends disabling Transparent HugePages on all Database servers running Oracle.
 
-## How to check if the Transparent HugePages are enabled
+###### How to check if the Transparent HugePages are enabled
 ----
 Default/Enabled setting is  [always]:
 ```
@@ -36,7 +36,7 @@ You can also issue:
 ```
 If the output contains a line like "AnonHugepages: xxxx kB", with a value > 0kB the kernel is using Transparent HugePages.Because the kernel currently uses Transparent HugePages only for the anonymous memory blocks like stack and heap, the value of AnonHugepages in /proc/meminfo isthe current amount of Transparent HugePages that the kernel is using
 
-## How to disable Transparent HugePages
+###### How to disable Transparent HugePages
 ----
 Add the following to the kernel boot line in /etc/grub.conf (this is the preferred method) and reboot the server:
 ```
