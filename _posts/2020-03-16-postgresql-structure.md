@@ -39,7 +39,7 @@ wz=# SELECT relname, oid FROM pg_class WHERE relname = 'test';
 
 下图展示PostgreSQL的物理结构。虽然PostgreSQL支持tablespaces，但是这个术语的含义与其他RDBMS不同。PostgreSQL中的tablespace是在base directory之外包含某些数据的一个directory。
 
-![image](img/2020-03-16-postgresql-structure/structure_2.png)
+![image](/img/2020-03-16-postgresql-structure/structure_2.png)
 
 ###### Layout of a Database Cluster
 
