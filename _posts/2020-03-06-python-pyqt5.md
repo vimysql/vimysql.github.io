@@ -5,16 +5,16 @@ category: [python]
 tags: [PyQt5]
 ---
 
-# 环境准备
+##### 环境准备
 
-## 安装python、pycharm和pyqt5
+###### 安装python、pycharm和pyqt5
 ----
 我的本地环境为windows7 64位、python版本3.7。
 
 安装好python后，通过pip工具安装好图形化开发所需的类库（pyqt5、pyqt5-sip、pyqt5-tools），可以在pycharm中查看是否已安装所需类库。
-![image](img/2020-03-06-python-pyqt5/pyqt5_1.png)
+![image](/img/2020-03-06-python-pyqt5/pyqt5_1.png)
 
-## PyCharm基本配置
+###### PyCharm基本配置
 ----
 创建新project：csv2txt
 
@@ -33,7 +33,7 @@ QTdesigner
 Program：自己的designer.exe路径 例如C:\Program Files\Python37\Lib\site-packages\pyqt5_tools\Qt\bin\designer.exe
 
 Working directory：$ProjectFileDir$
-![image](img/2020-03-06-python-pyqt5/pyqt5_2.png)
+![image](/img/2020-03-06-python-pyqt5/pyqt5_2.png)
 
 PyUIC
 
@@ -44,21 +44,21 @@ Program：自己的python.exe路径 例如C:\Program Files\Python37\Lib\site-pac
 Arguments：-m PyQt5.uic.pyuic $FileName$ -o $FileNameWithoutExtension$.py
 
 Working directory：$ProjectFileDir$
-![image](img/2020-03-06-python-pyqt5/pyqt5_3.png)
+![image](/img/2020-03-06-python-pyqt5/pyqt5_3.png)
 
-# GUI界面开发步骤
+##### GUI界面开发步骤
 
-## 利用QT Designer代码生成一个GUI界面 ，并用PyUIC转换为.py文件
+###### 利用QT Designer代码生成一个GUI界面 ，并用PyUIC转换为.py文件
 ----
-![image](img/2020-03-06-python-pyqt5/pyqt5_4.png)
+![image](/img/2020-03-06-python-pyqt5/pyqt5_4.png)
 
-![image](img/2020-03-06-python-pyqt5/pyqt5_5.png)
+![image](/img/2020-03-06-python-pyqt5/pyqt5_5.png)
 
 配置完成后保存，会在project目录下创建untitled.ui文件，然后右键选择External Tools->PyUIC 就会生成Utitled.ui对应的Utitled.py文件
 
-![image](img/2020-03-06-python-pyqt5/pyqt5_6.png)
+![image](/img/2020-03-06-python-pyqt5/pyqt5_6.png)
 
-## 将PyUIC转换后的.py文件中的内容添加到已开发完成的python脚本中
+###### 将PyUIC转换后的.py文件中的内容添加到已开发完成的python脚本中
 ----
 ```
 # -*- coding: utf-8 -*-
@@ -252,9 +252,9 @@ if __name__ == "__main__":
     MainWindow.show()                       # 执行QMainWindow的show()方法，显示这个QMainWindow
     sys.exit(app.exec_())                   # 使用exit()或者点击关闭按钮退出QApplication
 ```
-## 脚本保存为csv2txtmain.py后，使用pyinstaller进行打包
+###### 脚本保存为csv2txtmain.py后，使用pyinstaller进行打包
 ----
-![image](img/2020-03-06-python-pyqt5/pyqt5_7.png)
+![image](/img/2020-03-06-python-pyqt5/pyqt5_7.png)
 
 
 > 如有任何知识产权、版权问题或理论错误，还请指正。
