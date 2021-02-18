@@ -5,15 +5,15 @@ category: [postgresql]
 tags: [structure]
 ---
 
-# Structure of a database cluster
+##### Structure of a database cluster
  
-## Logical Structure of Database Cluster
+###### Logical Structure of Database Cluster
 ----
 下图展示了一个database cluster的逻辑结构，每个database是数据库对象的集合。
 
 在PostgreSQL中，databases也是数据库对象，并且它们各自都是逻辑独立分开的。所有其他数据库对象（例如，表，索引，其他）都属于它们各自的数据库。
 
-![image](./img/2020-03-16-postgresql-structure/structure_1.png)
+![image](/img/2020-03-16-postgresql-structure/structure_1.png)
 
 PostgreSQL中的所有数据库对象，在数据库内部都由各自的对象标识管理（OIDs），OID是无符号的4字节整数。
 
@@ -33,7 +33,7 @@ wz=# SELECT relname, oid FROM pg_class WHERE relname = 'test';
 (1 row)
 
 ```
-## Physical Structure of Database Cluster
+###### Physical Structure of Database Cluster
 ----
 一个database cluster大体上是一个目录（base directory），并且它包含一些子目录和很多文件。如果你执行initdb来初始化一个新database cluster，那么在指定目录下将创建一个base directory。虽然不是必须的，base directory路径通常设置为PGDATA环境变量的对应值。
 
@@ -41,7 +41,7 @@ wz=# SELECT relname, oid FROM pg_class WHERE relname = 'test';
 
 ![image](img/2020-03-16-postgresql-structure/structure_2.png)
 
-### Layout of a Database Cluster
+###### Layout of a Database Cluster
 
 |	files	|	description	|
 |	---	|	---	|
@@ -74,7 +74,7 @@ wz=# SELECT relname, oid FROM pg_class WHERE relname = 'test';
 |	pg_xact/ (Version 10 or later)	|	Subdirectory containing transaction commit state data. It is renamed from pg_clog in Version 10. 	|
 |	pg_xlog/ (Version 9.6 or earlier)	|	Subdirectory containing WAL (Write Ahead Logging) segment files. It is renamed to pg_wal in Version 10.	|
 
-### Layout of Databases
+###### Layout of Databases
 一个数据库是在base subdirectory下的子目录；并且数据库目录名称与对应的OIDs一样。例如，上面我们查询的wz数据库的OID是16384，它的子目录名称也是16384。
 
 ```
@@ -88,7 +88,7 @@ drwx------ 2 postgres postgres 8192 Mar  9 15:11 13214
 drwx------ 2 postgres postgres 8192 Mar 16 14:51 16384
 ```
 
-### Layout of Files Associated with Tables and Indexes
+###### Layout of Files Associated with Tables and Indexes
 
 在数据库目录下，每个小于1GB的表或索引是一个单独file。表和索引是由单独的OIDs管理的，这些数据文件是由变量，相对文件节点管理的。表和索引的相对文件节点值并不总是和OIDs匹配。
 
@@ -166,10 +166,10 @@ $ ls -la base/16384/18751*
 -rw------- 1 postgres postgres  8192 Apr 21 10:18 base/16384/18751_vm
 ```
 
-### Tablespaces
+###### Tablespaces
 PostgreSQL中的表空间是在base directory之外的附加数据区域。这个功能在8.0版本开始生效。
 
-![image](./img/2020-03-16-postgresql-structure/structure_3.png)
+![image](/img/2020-03-16-postgresql-structure/structure_3.png)
 
 待续……
 
