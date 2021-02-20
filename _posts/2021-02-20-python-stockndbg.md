@@ -11,6 +11,11 @@ tags: [web scraping]
 你说你好好的注册会计师不好好干，来掺和这*ST是为了什么？
 ![image](/img/2021-02-20-python-stockndbg/stockndbg_1.png)
 
+计算一下堂堂会计师事务所的人均收入，好像有点小惊喜！
+![image](/img/2021-02-20-python-stockndbg/stockndbg_2.png)
+
+###### 以下为本实验的脚本
+参考https://github.com/ShaoZC
 ```
 import xlrd #（excel read）来读取Excel文件
 import xlwt #（excel write）来生成Excel文件
