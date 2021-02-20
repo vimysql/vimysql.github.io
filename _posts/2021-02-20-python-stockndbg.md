@@ -6,8 +6,10 @@ tags: [web scraping]
 ---
 
 ##### 爬取新浪财经年报数据1-会计师事务所
-
-![image](/img/2021-02-19-oracle-pdml/pdml_1.png)
+作为大A股多家上市公司的“股东”（韭菜），不仅需要关注上市公司的质量，还需要关注为其服务的会计师事务所。
+###### 以下为本实验的缘由
+你说你好好的注册会计师不好好干，来掺和这*ST是为了什么？
+![image](/img/2021-02-20-python-stockndbg/stockndbg_1.png)
 
 ```
 import xlrd #（excel read）来读取Excel文件
