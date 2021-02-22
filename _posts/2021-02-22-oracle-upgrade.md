@@ -6,7 +6,7 @@ tags: [upgrade]
 ---
 
 ##### 数据库升级路线图
-
+转发自https://www.askmaclean.com
 ![image](/img/2021-02-22-oracle-upgrade/9ir2.jpg)
 ![image](/img/2021-02-22-oracle-upgrade/10gr2.jpg)
 ![image](/img/2021-02-22-oracle-upgrade/11gr2.jpg)
