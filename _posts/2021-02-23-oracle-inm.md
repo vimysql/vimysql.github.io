@@ -47,7 +47,7 @@ tags: [in-memory]
 ![image](/img/2021-02-23-oracle-inm/inm_2.png)
 
 行式
-
+![image](/img/2021-02-23-oracle-inm/inm_3.gif)
 
 > 如有任何知识产权、版权问题或理论错误，还请指正。
 >
