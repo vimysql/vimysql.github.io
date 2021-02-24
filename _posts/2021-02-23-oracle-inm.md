@@ -4,9 +4,9 @@ title: In-Memory Column Store
 category: [oracle]
 tags: [in-memory]
 ---
-#####In-Memory Column
+##### In-Memory Column
 
-######In-Memory Column Store特性
+###### In-Memory Column Store特性
 ----
 从12.1.0.2版本开始，新增了In-Memory Column Store (IM column store)特性。
 
@@ -17,7 +17,7 @@ tags: [in-memory]
 如下图所示：
 ![image](/img/2021-02-23-oracle-inm/inm_1.png)
 
-######行式和列式数据库
+###### 行式和列式数据库
 ----
 常见的行式数据库系统有：MySQL、Postgres和MS SQL Server。
 
@@ -25,7 +25,7 @@ tags: [in-memory]
 
 不同的数据存储方式适用不同的业务场景，数据访问的场景包括：进行了何种查询、多久查询一次以及各类查询的比例；每种类型的查询(行、列和字节)读取多少数据；读取数据和更新之间的关系；使用的数据集大小以及如何使用本地的数据集；是否使用事务,以及它们是如何进行隔离的；数据的复制机制与数据的完整性要求；每种类型的查询要求的延迟与吞吐量等等。
 
-######OLAP场景的关键特征
+###### OLAP场景的关键特征
 ----
 1. 绝大多数是读请求
 2. 数据以相当大的批次(> 1000行)更新，而不是单行更新;或者根本没有更新。
