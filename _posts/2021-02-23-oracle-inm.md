@@ -49,6 +49,12 @@ tags: [in-memory]
 行式
 ![image](/img/2021-02-23-oracle-inm/inm_3.gif)
 
+列式
+![image](/img/2021-02-23-oracle-inm/inm_4.gif)
+
+应用场景举例
+![image](/img/2021-02-23-oracle-inm/inm_5.png)
+
 > 如有任何知识产权、版权问题或理论错误，还请指正。
 >
 > 转载请注明原作者及以上信息。
