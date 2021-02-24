@@ -7,6 +7,7 @@ tags: [PDML]
 
 ##### PDML新hint的版本说明
 只有满足以下版本要求，才能使用该新hint
+
 Oracle Database - Enterprise Edition - Version 12.1.0.1 and later
 
 ###### 官方原文解释如下
