@@ -4,9 +4,9 @@ title: In-Memory Column Store
 category: [oracle]
 tags: [in-memory]
 ---
-#####
-In-Memory Column Store
+#####In-Memory Column Store
 从12.1.0.2版本开始，新增了In-Memory Column Store (IM column store)特性。
+
 如下图所示：
 ![image](/img/2021-02-23-oracle-inm/inm_1.png)
 
