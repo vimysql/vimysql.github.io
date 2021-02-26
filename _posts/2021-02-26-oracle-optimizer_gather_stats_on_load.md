@@ -56,7 +56,7 @@ SQL> select owner, table_name, sample_size, last_analyzed, stale_stats
 OWNER                                                                            TABLE_NAME                                                                       SAMPLE_SIZE LAST_ANALYZED STALE_STATS
 -------------------------------------------------------------------------------- -------------------------------------------------------------------------------- ----------- ------------- -----------
 SYS                                                                              T_APPROXTEST                                                                                               
-C##MUWANGZHONG                                                                   T_APPROXTEST                                                                        11665280 2021-02-26 17 NO
+C##TEST                                                                          T_APPROXTEST                                                                        11665280 2021-02-26 17 NO
 
 ```
 
