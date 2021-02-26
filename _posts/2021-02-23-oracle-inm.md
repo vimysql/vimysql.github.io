@@ -1,6 +1,6 @@
 ---
 layout: post
-title: In-Memory Column Store
+title: New 12c Feature:In-Memory Column Store
 category: [oracle]
 tags: [in-memory]
 ---
