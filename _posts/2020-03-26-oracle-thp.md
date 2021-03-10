@@ -74,6 +74,7 @@ fi
 ```
 
 ###### RHEL7 disable Transparent HugePages
+----
 在/etc/default/grub配置文件中添加transparent_hugepage=never
 
 ```
