@@ -73,6 +73,39 @@ if test -f /sys/kernel/mm/transparent_hugepage/defrag; then
 fi
 ```
 
+###### RHEL7 disable Transparent HugePages
+在/etc/default/grub配置文件中添加transparent_hugepage=never
+
+```
+[root@NJ-BJEASTDB-02-01 software]# cat /sys/kernel/mm/transparent_hugepage/enabled
+[always] madvise never
+
+[root@NJ-BJEASTDB-02-01 software]# cat  /etc/default/grub
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT="console"
+GRUB_CMDLINE_LINUX="rd.lvm.lv=vg00/lv_root rd.lvm.lv=vg00/lv_swap transparent_hugepage=never  biosdevname=0 net.ifnames=0 rhgb quiet"
+GRUB_DISABLE_RECOVERY="true"
+
+[root@NJ-BJEASTDB-02-01 software]#  grub2-mkconfig -o /boot/grub2/grub.cfg
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-3.10.0-957.el7.x86_64
+Found initrd image: /boot/initramfs-3.10.0-957.el7.x86_64.img
+Found linux image: /boot/vmlinuz-0-rescue-3aef2e04273a481db35f04ccfc75e381
+Found initrd image: /boot/initramfs-0-rescue-3aef2e04273a481db35f04ccfc75e381.img
+done
+
+[root@NJ-BJEASTDB-02-01 software]# reboot
+
+[root@NJ-BJEASTDB-02-01 ~]# cat /sys/kernel/mm/transparent_hugepage/enabled
+always madvise [never]
+
+
+```
+
+
 > 如有任何知识产权、版权问题或理论错误，还请指正。
 >
 > 转载请注明原作者及以上信息。
