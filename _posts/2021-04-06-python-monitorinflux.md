@@ -44,7 +44,7 @@ InfluxDB的体系如下图所示：
 influxdb启动命令如下：
 
 ```
-service influxdb restart
+service influxdb start
 ```
 
 连接influxdb数据库并查看数据库状态等信息。
